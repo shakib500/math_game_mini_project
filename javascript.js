@@ -22,7 +22,7 @@ document.getElementById('startreset').onclick = function() {
     startCountDown();
 
     // generate new QA
-    generateQA();
+  //  generateQA();
 
   }
 }
@@ -50,18 +50,18 @@ function stopCountDown(){
 }
 
 // To hide an element
-function hide(Id){
-  document.getElementById('Id').style.display = 'none';
+function hide(id){
+  document.getElementById(id).style.display = 'none';
 }
 // To show an element
-function show(Id){
-  document.getElementById('Id').style.display = 'block';
+function show(id){
+  document.getElementById(id).style.display = 'block';
 }
 
 // for generating Question and multiple Answer
-function generateQA(){
-
-}
+// function generateQA(){
+//
+// }
 // reload
 //if not playing
 // show countdown
