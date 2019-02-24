@@ -21,9 +21,6 @@ document.getElementById('startreset').onclick = function() {
     // start countdown
     startCountDown();
 
-
-
-
   }
 }
 
@@ -34,6 +31,10 @@ function startCountDown(){
     if(timeremaining == 0){
       // game over
       stopCountDown();
+
+    document.getElementById('gameOver').style.display = 'block';
+    document.getElementById('gameOver').innerHTML = '<p>Game Over!</p><p>Your Score is  ' + score + '.</p>'
+    document.getElementById('timeremaining').style.display = 'none';
     }
   },1000);
 }
