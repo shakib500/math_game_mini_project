@@ -37,6 +37,7 @@ function startCountDown(){
     hide('timeremaining');
     hide('correct');
     hide('wrong');
+    playing = false;
     }
   },1000);
 }
@@ -45,9 +46,11 @@ function stopCountDown(){
   clearInterval(action);
 }
 
+// To hide an element
 function hide(Id){
   document.getElementById('Id').style.display = 'none';
 }
+// To show an element
 function show(Id){
   document.getElementById('Id').style.display = 'block';
 }
