@@ -13,7 +13,7 @@ document.getElementById('startreset').onclick = function() {
     score = 0;
     document.getElementById('scorevalue').innerHTML = score;
     // show countdown box
-    document.getElementById('timeremaining').style.display = 'block';
+    show('timeremaining');
     timeremaining = 60;
     document.getElementById('timeremainingvalue').innerHTML = timeremaining;
     // change button to reset
@@ -32,9 +32,11 @@ function startCountDown(){
       // game over
       stopCountDown();
 
-    document.getElementById('gameOver').style.display = 'block';
+    show('gameOver');
     document.getElementById('gameOver').innerHTML = '<p>Game Over!</p><p>Your Score is  ' + score + '.</p>'
-    document.getElementById('timeremaining').style.display = 'none';
+    hide('timeremaining');
+    hide('correct');
+    hide('wrong');
     }
   },1000);
 }
