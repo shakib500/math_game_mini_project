@@ -8,10 +8,10 @@ document.getElementById('startreset').onclick = function() {
   } else { // if not playing
     score = 0;
     document.getElementById('scorevalue').innerHTML = score;
+    document.getElementById('timeremaining').style.display = 'block';
   }
 
 }
-
 
 // reload
 //if not playing
