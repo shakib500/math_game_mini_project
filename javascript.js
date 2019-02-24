@@ -43,6 +43,13 @@ function stopCountDown(){
   clearInterval(action);
 }
 
+function hide(Id){
+  document.getElementById('Id').style.display = 'none';
+}
+function show(Id){
+  document.getElementById('Id').style.display = 'block';
+}
+
 // reload
 //if not playing
 // show countdown
