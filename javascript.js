@@ -21,6 +21,9 @@ document.getElementById('startreset').onclick = function() {
     // start countdown
     startCountDown();
 
+    // generate new QA
+    generateQA();
+
   }
 }
 
@@ -55,6 +58,10 @@ function show(Id){
   document.getElementById('Id').style.display = 'block';
 }
 
+// for generating Question and multiple Answer
+function generateQA(){
+
+}
 // reload
 //if not playing
 // show countdown
