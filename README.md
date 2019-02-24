@@ -1,1 +1,1 @@
-# math_game_mini_project
+# Math game mini project
