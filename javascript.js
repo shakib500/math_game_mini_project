@@ -16,20 +16,22 @@ document.getElementById('startreset').onclick = function() {
     show('timeremaining');
     timeremaining = 60;
     document.getElementById('timeremainingvalue').innerHTML = timeremaining;
+    // hide game over box
+    hide('gameOver');
     // change button to reset
     document.getElementById('startreset').innerHTML = 'Reset Game';
     // start countdown
     startCountDown();
 
     // generate new QA
-  //  generateQA();
+    generateQA();
 
   }
 }
 
 function startCountDown(){
   action = setInterval(function(){
-    timeremaining -= 1;
+    timeremaining -= 10;
     document.getElementById('timeremainingvalue').innerHTML = timeremaining;
     if(timeremaining == 0){
       // game over
@@ -41,6 +43,8 @@ function startCountDown(){
     hide('correct');
     hide('wrong');
     playing = false;
+    document.getElementById('startreset').innerHTML = 'Start Game';
+    //hide('gameOver');
     }
   },1000);
 }
@@ -59,9 +63,9 @@ function show(id){
 }
 
 // for generating Question and multiple Answer
-// function generateQA(){
-//
-// }
+function generateQA(){
+
+}
 // reload
 //if not playing
 // show countdown
