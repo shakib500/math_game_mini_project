@@ -2,6 +2,7 @@ var playing = false;
 var score;
 var action;
 var timeremaining;
+var correctAnswer;
 // if we click star/reset button
 document.getElementById('startreset').onclick = function() {
   // if playing
@@ -64,6 +65,13 @@ function show(id){
 
 // for generating Question and multiple Answer
 function generateQA(){
+  var x = 1 + Math.round(19 * Math.random());
+  var y = 1 + Math.round(19 * Math.random());
+  correctAnswer = x+y;
+  document.getElementById('question').innerHTML = x +' X ' + y;
+  var correctPosition = 1 + Math.round(3 * Math.random());
+  // filling 1 box with the correct answer
+  document.getElementById('box' + correctPosition).innerHTML = correctAnswer;
 
 }
 // reload
