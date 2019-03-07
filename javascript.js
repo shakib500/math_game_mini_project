@@ -73,6 +73,12 @@ function generateQA(){
   // filling 1 box with the correct answer
   document.getElementById('box' + correctPosition).innerHTML = correctAnswer;
 
+  for( i=1; i<5; i++){
+    if ( i !== correctPosition){
+      var wrongAnswer = (1 + Math.round(19 * Math.random())) * (1 + Math.round(19 * Math.random())); // wrong answer
+    }
+  }
+
 }
 // reload
 //if not playing
