@@ -32,7 +32,7 @@ document.getElementById('startreset').onclick = function() {
 
 function startCountDown(){
   action = setInterval(function(){
-    timeremaining -= 10;
+    timeremaining -= 1;
     document.getElementById('timeremainingvalue').innerHTML = timeremaining;
     if(timeremaining == 0){
       // game over
@@ -67,7 +67,7 @@ function show(id){
 function generateQA(){
   var x = 1 + Math.round(19 * Math.random());
   var y = 1 + Math.round(19 * Math.random());
-  correctAnswer = x+y;
+  correctAnswer = x*y;
   document.getElementById('question').innerHTML = x +' X ' + y;
   var correctPosition = 1 + Math.round(3 * Math.random());
   // filling 1 box with the correct answer
@@ -75,10 +75,10 @@ function generateQA(){
 
   for( i=1; i<5; i++){
     if ( i !== correctPosition){
-      var wrongAnswer = (1 + Math.round(19 * Math.random())) * (1 + Math.round(19 * Math.random())); // wrong answer
+      var wrongAnswer = (1 + Math.round(19 * Math.random())) * (1 + Math.round(19 * Math.random())); // a wrong answer
+      document.getElementById("box"+i).innerHTML = wrongAnswer;
     }
   }
-
 }
 // reload
 //if not playing
